@@ -1,0 +1,195 @@
+/* =========================================================
+   Club des Étudiants U-AUBEN — feuille de style commune
+   NE PAS MODIFIER sur vos branches : styles propres à une
+   page → balise <style> dans le <head> de votre page.
+   ========================================================= */
+
+:root {
+  --vert: #0b6e4f;
+  --vert-fonce: #084c37;
+  --or: #f2a900;
+  --rouge: #c8102e;
+  --texte: #1f2933;
+  --gris: #6b7280;
+  --fond: #f7f8f5;
+  --blanc: #ffffff;
+  --bord: #e2e5e0;
+  --rayon: 10px;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  line-height: 1.6;
+  color: var(--texte);
+  background: var(--fond);
+}
+
+img { max-width: 100%; height: auto; display: block; }
+a { color: var(--vert); }
+h1, h2, h3 { line-height: 1.25; color: var(--vert-fonce); }
+
+/* ---------- En-tête et menu ---------- */
+.site-header {
+  background: var(--vert);
+  padding: 0.8rem 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  border-bottom: 4px solid var(--or);
+}
+.logo { color: var(--blanc); font-weight: 700; font-size: 1.2rem; text-decoration: none; }
+.logo span { color: var(--or); }
+.site-header nav ul {
+  list-style: none; margin: 0; padding: 0;
+  display: flex; flex-wrap: wrap; gap: 0.25rem;
+}
+.site-header nav a {
+  color: var(--blanc); text-decoration: none;
+  padding: 0.35rem 0.6rem; border-radius: 6px; font-size: 0.95rem;
+}
+.site-header nav a:hover { background: var(--vert-fonce); }
+.site-header nav a.active { background: var(--or); color: var(--texte); font-weight: 600; }
+
+/* ---------- Mise en page ---------- */
+.container { max-width: 1100px; margin: 0 auto; padding: 1.5rem 1rem 3rem; }
+
+.hero {
+  text-align: center;
+  padding: 3.5rem 1rem;
+  background: linear-gradient(135deg, var(--vert-fonce), var(--vert));
+  color: var(--blanc);
+}
+.hero h1 { color: var(--blanc); margin-top: 0; }
+.slogan { font-size: 1.25rem; font-style: italic; color: var(--or); }
+
+.bouton, button {
+  display: inline-block;
+  background: var(--or);
+  color: var(--texte);
+  border: none;
+  padding: 0.7rem 1.4rem;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  cursor: pointer;
+}
+.bouton:hover, button:hover { filter: brightness(0.92); }
+
+.site-footer {
+  background: var(--vert-fonce);
+  color: #d6e4dd;
+  text-align: center;
+  padding: 1.2rem 1rem;
+  font-size: 0.9rem;
+}
+.site-footer p { margin: 0.2rem 0; }
+.auteur { color: var(--or); }
+
+/* ---------- Grille et cartes ---------- */
+.grille {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.2rem;
+  margin: 1.5rem 0;
+}
+.carte {
+  background: var(--blanc);
+  border: 1px solid var(--bord);
+  border-radius: var(--rayon);
+  padding: 1.2rem;
+  margin: 0;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+}
+.carte h2, .carte h3 { margin-top: 0; }
+.carte img { border-radius: var(--rayon); margin-bottom: 0.8rem; aspect-ratio: 1; object-fit: cover; width: 100%; }
+.role { color: var(--rouge); font-weight: 600; margin: 0; }
+
+.sommaire {
+  background: var(--blanc);
+  border-left: 4px solid var(--or);
+  padding: 0.6rem 1rem;
+  border-radius: 6px;
+}
+
+blockquote {
+  margin: 1rem 0;
+  padding: 0.8rem 1.2rem;
+  border-left: 4px solid var(--vert);
+  background: var(--blanc);
+  font-style: italic;
+}
+
+/* ---------- Tableau ---------- */
+.tableau {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--blanc);
+  border-radius: var(--rayon);
+  overflow: hidden;
+}
+.tableau caption { text-align: left; font-weight: 600; padding: 0.5rem 0; }
+.tableau th, .tableau td { padding: 0.7rem; border-bottom: 1px solid var(--bord); text-align: left; }
+.tableau thead th { background: var(--vert); color: var(--blanc); }
+.tableau tbody tr:nth-child(even) { background: #f0f4f1; }
+
+/* ---------- Formulaires ---------- */
+.formulaire { display: flex; flex-direction: column; gap: 0.4rem; max-width: 560px; }
+.formulaire label { font-weight: 600; margin-top: 0.6rem; }
+.formulaire fieldset label { font-weight: 400; display: block; margin-top: 0.2rem; }
+.formulaire input[type="text"],
+.formulaire input[type="email"],
+.formulaire input[type="tel"],
+.formulaire select,
+.formulaire textarea {
+  padding: 0.6rem;
+  border: 1px solid var(--bord);
+  border-radius: 6px;
+  font: inherit;
+  background: var(--blanc);
+}
+.formulaire input:focus, .formulaire select:focus, .formulaire textarea:focus {
+  outline: 2px solid var(--or);
+  border-color: var(--or);
+}
+.formulaire fieldset { border: 1px solid var(--bord); border-radius: 6px; margin-top: 0.8rem; }
+.formulaire button { margin-top: 1rem; align-self: flex-start; }
+
+address { font-style: normal; }
+
+/* ---------- Galerie ---------- */
+.galerie { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+.galerie img {
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  width: 100%;
+  border-radius: var(--rayon);
+  transition: transform 0.2s;
+}
+.galerie a:hover img { transform: scale(1.03); }
+
+/* ---------- Carte d'accès ---------- */
+.carte-plan { width: 100%; height: 320px; border: 0; border-radius: var(--rayon); }
+
+/* ---------- FAQ ---------- */
+.faq details {
+  background: var(--blanc);
+  border: 1px solid var(--bord);
+  border-radius: var(--rayon);
+  padding: 0.8rem 1rem;
+  margin-bottom: 0.6rem;
+}
+.faq summary { cursor: pointer; font-weight: 600; color: var(--vert-fonce); }
+.faq details[open] summary { margin-bottom: 0.4rem; }
+
+/* ---------- Mobile ---------- */
+@media (max-width: 640px) {
+  .site-header { flex-direction: column; align-items: flex-start; }
+  .hero { padding: 2.5rem 1rem; }
+  .tableau { font-size: 0.9rem; }
+}
