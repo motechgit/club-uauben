@@ -18,9 +18,9 @@ Site web statique (HTML/CSS) réalisé collaborativement avec Git et GitHub dans
 ## Démarrage rapide
 
 ```bash
-git clone https://github.com/<enseignant>/club-uauben.git
+git clone [https://github.com/motechgit/club-uauben.git]
 cd club-uauben
-git switch feature/<page>
+git switch feature/<votre branche ou page>
 cp pages/_modele.html pages/<page>.html
 ```
 
@@ -32,4 +32,4 @@ Ouvrir `index.html` dans un navigateur, puis cliquer sur sa page dans le menu.
 
 ## Site en ligne
 
-`https://<enseignant>.github.io/club-uauben/` (GitHub Pages, branche `main`).
+`https://motechgit.github.io/club-uauben/` (GitHub Pages, branche `main`).
