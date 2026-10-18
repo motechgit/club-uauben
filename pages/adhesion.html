@@ -40,6 +40,24 @@
 
       <label for="tel">Téléphone</label>
       <input type="tel" id="tel" name="tel" placeholder="+226 70 00 00 00">
+      
+      <label for="filiere">Filière *</label>
+      <select id="filiere" name="filiere" required>
+        <option value="">-- Choisir --</option>
+        <option>Informatique</option>
+        <option>Gestion</option>
+        <option>Droit</option>
+        <option>Génie civil</option>
+        <option>Communication</option>
+      </select>
+
+      <fieldset>
+        <legend>Pôles qui vous intéressent</legend>
+        <label><input type="checkbox" name="poles" value="academique"> Académique</label>
+        <label><input type="checkbox" name="poles" value="culture"> Culture</label>
+        <label><input type="checkbox" name="poles" value="sport"> Sport</label>
+        <label><input type="checkbox" name="poles" value="social"> Social</label>
+      </fieldset>
     </form>
   </main>
 
