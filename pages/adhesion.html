@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Adhésion | Club des Étudiants U-AUBEN</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a href="../index.html" class="logo">Club des Étudiants <span>U-AUBEN</span></a>
+    <nav>
+      <ul>
+        <li><a href="../index.html">Accueil</a></li>
+        <li><a href="presentation.html">Présentation</a></li>
+        <li><a href="bureau.html">Bureau</a></li>
+        <li><a href="activites.html">Activités</a></li>
+        <li><a href="evenements.html">Événements</a></li>
+        <li><a href="galerie.html">Galerie</a></li>
+        <li><a href="adhesion.html" class="active">Adhésion</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1>Rejoindre le club</h1>
+    <p>Cotisation annuelle : 2 000 FCFA, à régler auprès du trésorier après validation.</p>
+
+    <form class="formulaire" action="https://formspree.io/f/xppqnwry" method="POST">
+      <label for="nom">Nom et prénom *</label>
+      <input type="text" id="nom" name="nom" required>
+
+      <label for="matricule">Matricule *</label>
+      <input type="text" id="matricule" name="matricule" required>
+
+      <label for="email">E-mail *</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="tel">Téléphone</label>
+      <input type="tel" id="tel" name="tel" placeholder="+226 70 00 00 00">
+      
+      <label for="filiere">Filière *</label>
+      <select id="filiere" name="filiere" required>
+        <option value="">-- Choisir --</option>
+        <option>Informatique</option>
+        <option>Gestion</option>
+        <option>Droit</option>
+        <option>Génie civil</option>
+        <option>Communication</option>
+      </select>
+
+      <fieldset>
+        <legend>Pôles qui vous intéressent</legend>
+        <label><input type="checkbox" name="poles" value="academique"> Académique</label>
+        <label><input type="checkbox" name="poles" value="culture"> Culture</label>
+        <label><input type="checkbox" name="poles" value="sport"> Sport</label>
+        <label><input type="checkbox" name="poles" value="social"> Social</label>
+      </fieldset>
+      
+      <label><input type="checkbox" name="charte" required> J'accepte la charte du club *</label>
+
+      <button type="submit">Envoyer ma demande</button>
+    </form>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 Club des Étudiants de l'U-AUBEN — Ouagadougou, Burkina Faso</p>
+    <p class="auteur">Page réalisée par : Steve Dylan Bassolé</p>
+  </footer>
+</body>
+</html>
